@@ -2,8 +2,6 @@ import express, { Request, Response, NextFunction } from 'express'
 import 'express-async-errors'
 import cors from 'cors'
 
-import path from 'path'
-
 import { router } from './routes'
 
 import fileUpload from 'express-fileupload'
@@ -17,11 +15,9 @@ app.use(fileUpload({
     fileSize: 50 * 1024 * 1024
   } // no maximo 50mb
 }))
+
 app.use(router)
 
-app.use('/files',
-  express.static(path.resolve(__dirname, '..', 'tmp'))
-)
 
 // Middleware que intercepta os erros
 app.use((
