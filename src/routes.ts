@@ -5,6 +5,7 @@ import { isAuthenticated } from './middlewares/isAuthenticated'
 
 // Controllers
 import { CreateLeadController } from './controllers/lead/CreateLeadController'
+import { ListLeadController } from './controllers/lead/ListeLeadController'
 const router = Router()
 
 // Configuração do envio de arquivos
@@ -18,6 +19,7 @@ router.get('/', (req: Request, res: Response) => {
 
 // Cria um novo usuario
 router.post('/leads', new CreateLeadController().handle)
+router.get('/leads', new ListLeadController().handle)
 
 
 export { router }
