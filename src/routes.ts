@@ -12,7 +12,7 @@ const router = Router()
 router.get('/', (req: Request, res: Response) => {
   return res.send(`
     <h1 style='font-family: sans-serif'>
-        API Sentier intitucional!!! 👩‍🏫
+        API Sentier intitucional!!! Aopa :D
     <h1>
   `)
 })
